@@ -7,7 +7,9 @@ import {
   Alert,
 } from "react-native";
 import React, { useState } from "react";
-
+import AntDesign from "@expo/vector-icons/AntDesign";
+import Entypo from "@expo/vector-icons/Entypo";
+import FontAwesome from "@expo/vector-icons/FontAwesome";
 const SignupForm = () => {
   const [input, setInput] = useState("");
   const [password, setPassword] = useState("");
@@ -53,6 +55,57 @@ const SignupForm = () => {
       <TouchableOpacity style={styles.btn} activeOpacity={0.8} onPress={btn}>
         <Text style={styles.btnText}>Login</Text>
       </TouchableOpacity>
+      <Text
+        style={{
+          marginTop: 20,
+          fontSize: 25,
+          color: "white",
+        }}
+      >
+        -------------- or-------------
+      </Text>
+      <View
+        style={{
+          display: "flex",
+          flexDirection: "row",
+          gap: 30,
+          marginTop: 20,
+        }}
+      >
+        <AntDesign
+          name="google"
+          size={30}
+          color="black"
+          style={{
+            borderWidth: 2,
+            borderColor: "white",
+            padding: 8,
+            borderRadius: 5,
+          }}
+        />
+        <Entypo
+          name="facebook"
+          size={30}
+          color="black"
+          style={{
+            borderWidth: 2,
+            borderColor: "white",
+            padding: 8,
+            borderRadius: 5,
+          }}
+        />
+        <FontAwesome
+          name="github-square"
+          size={35}
+          color="black"
+          style={{
+            borderWidth: 2,
+            borderColor: "white",
+            padding: 8,
+            borderRadius: 5,
+          }}
+        />
+      </View>
     </View>
   );
 };
@@ -98,6 +151,7 @@ const styles = StyleSheet.create({
     width: 250,
     borderRadius: 5,
     backgroundColor: "white",
+    marginTop: 15,
   },
   btnText: {
     color: "#4ad3e6", // Button text color
